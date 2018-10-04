@@ -1,0 +1,19 @@
+.wrapper {
+display:flex;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.wrapper div {
+background: #eee;
+padding: 1em;
+}
+
+.wrapper > div:nth-child(odd){
+background:#ddd;
+align-items: center;
+justify-content: center;
+
+
+
+}
