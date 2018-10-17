@@ -12,7 +12,7 @@
 
         html, body {
           background-color: #ffeead;
-          margin: 10px;
+          
         }
 
         .container > div:nth-child(1n) {
@@ -34,8 +34,7 @@
         .container {
           display:grid;
           grid-template-columns:  auto auto auto;
-          grid-column-gap: 10px;
-            grid-row-gap: 10px;
+
         }
 
 @media screen and  (max-width: 480px){
@@ -43,7 +42,7 @@
   grid-column:  1/ span 3;
 }
 .main{
-  grid-column:  1 / span 2;
+  grid-column:  1 / span 3;
 }
 .footer {
   grid-column: 1 / span 3;
@@ -53,17 +52,38 @@
 
 }
 }
+@media screen and  (min-width: 481px){
+  .header{
+    grid-column: 1/span 3;
+  }
+  .mainp{
+    grid-column :2 /span 3 ;
+  }
+  .ul  {
+    grid-column: 3 / span 1;
+  }
+  .footer {
+    grid-column: 1/span 3;
+  }
+}
 
         </style>
     </head>
     <body>
         <div class="container">
-            <div class="header">1</div>
-            <div class="main">2</div>
-            <div class="main">3</div>
+            <div class="header">
+              <h1 class="heading">Welcome to the page</h1></div>
+            <div class="main"><p class="mainp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis reprehenderit, asperiores deleniti laborum, doloremque dicta placeat deserunt. Dolores amet rem necessitatibus porro similique a distinctio velit iure ipsa voluptatibus, ipsam cum molestias, deserunt animi est sint nesciunt? Tempora ipsam autem blanditiis ut perferendis, esse temporibus reiciendis odit ratione sequi dolores quibusdam, quisquam, a nihil itaque. Illum ipsa eius debitis expedita, quos culpa sequi quam placeat quaerat quis, labore nemo cum sint assumenda mollitia consectetur vero ad aliquam. A, amet architecto.</p></div>
+            <div class="ul"><ul>
+              <li>hey</li>
+              <li>there</li>
+              <li>bud</li>
+            </ul></div>
             <div class="side">4</div>
-            <div class="side">5</div>
-            <div class="footer">6</div>
+
+            <div class="footer">
+              <h1>This is a footer</h1>
+            </div>
         </div>
     </body>
 </html>
