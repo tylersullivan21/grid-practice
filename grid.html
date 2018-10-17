@@ -1,20 +1,69 @@
-
-<!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-<link rel="stylesheet" href="css/grid.css"
-</head>
-<body>
+    <head>
+        <link rel="stylesheet" href="grid.css">
+        <style>
+        .container > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #ffeead;
+        }
 
-.<div class="wrapper">
-  <div>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam vitae at quos deleniti praesentium excepturi aliquid harum, esse voluptas distinctio illo sunt, repellendus provident soluta recusandae voluptates iusto tempora atque ipsam nobis officia earum? Libero delectus magni consectetur, iste maiores iure est necessitatibus omnis! Quod maiores praesentium reprehenderit id magnam in nemo. Nisi porro enim, magnam error ducimus commodi iure temporibus. Placeat ad, quae magnam, sit eligendi labore quis autem, atque fugiat ut aperiam repudiandae quia. Animi, excepturi eveniet laboriosam.
-</div>
-<div>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ea nemo, eveniet nulla rerum reprehenderit eum natus obcaecati molestias quo at odit tenetur quia porro ab nisi eligendi officiis optio.
-</div>
-</div>
+        html, body {
+          background-color: #ffeead;
+          margin: 10px;
+        }
 
-</body>
+        .container > div:nth-child(1n) {
+          background-color: #96ceb4;
+        }
+
+        .container > div:nth-child(3n) {
+          background-color: #88d8b0;
+        }
+
+        .container > div:nth-child(2n) {
+              background-color: #ff6f69;
+        }
+
+        .container > div:nth-child(4n) {
+              background-color: #ffcc5c;
+        }
+
+        .container {
+          display:grid;
+          grid-template-columns:  auto auto auto;
+          grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        }
+
+@media screen and  (max-width: 480px){
+.header {
+  grid-column:  1/ span 3;
+}
+.main{
+  grid-column:  1 / span 2;
+}
+.footer {
+  grid-column: 1 / span 3;
+}
+.side {
+  grid-column: 2/ span 2;
+
+}
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">1</div>
+            <div class="main">2</div>
+            <div class="main">3</div>
+            <div class="side">4</div>
+            <div class="side">5</div>
+            <div class="footer">6</div>
+        </div>
+    </body>
 </html>
